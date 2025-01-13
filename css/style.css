@@ -1,0 +1,678 @@
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+    color: #012F2C;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn-hover-bg {
+    transition: 0.5s;
+}
+
+.btn-hover-bg:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-primary) !important;
+}
+
+.btn-hover-color {
+    transition: 0.5s;
+}
+
+.btn-hover-color:hover {
+    color: var(--bs-secondary) !important;
+}
+/*** Topbar Start ***/
+.fixed-top .container {
+    transition: 0.5s;
+}
+
+.topbar {
+    padding: 2px 10px 2px 20px;
+    background: var(--bs-primary) !important;
+}
+
+.topbar a,
+.topbar a i {
+    transition: 0.5s;
+}
+
+.topbar a:hover,
+.topbar a i:hover {
+    color: var(--bs-secondary) !important;
+}
+
+
+@media (max-width: 768px) {
+    .topbar {
+        display: none;    
+    }
+}
+/*** Topbar End ***/
+
+
+/*** Navbar Start ***/
+.navbar {
+    padding: 0;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar .collapse.navbar-collapse .btn-hover-bg.btn {
+        margin-bottom: 20px;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+/* General styling for the navbar 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Styling for the logo image */
+  .navbar-logo {
+    height: 100px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure it fits well without cropping */
+    padding: 5px; /* Optional padding for spacing */
+    cursor: pointer; /* Make it clickable if it's a link */
+  }
+  
+  /* Optional: Adjust size for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-logo {
+      height: 40px;
+    }
+  }
+  
+/*** Navbar End ***/
+
+/*** Carousel Start ***/
+.carousel-header #carouselId .carousel-control-prev,
+.carousel-header #carouselId .carousel-control-next {
+    background: transparent;
+}
+
+.carousel-header #carouselId .carousel-inner .carousel-item {
+    position: relative;
+    min-height: 100vh 
+}
+
+.carousel-header #carouselId .carousel-inner .carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-header #carouselId .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4));
+    background-size: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+}
+
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+    background: transparent !important;
+}
+
+.carousel-header #carouselId.carousel {
+    position: relative;
+}
+
+.carousel-header #carouselId.carousel .carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+}
+
+.carousel-header #carouselId.carousel .carousel-indicators li,
+.carousel-header #carouselId.carousel .carousel-indicators li,
+.carousel-header #carouselId.carousel .carousel-indicators li {
+    margin-right: 30px !important;
+}
+
+.carousel-header #carouselId.carousel .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px !important;
+    border: 5px solid transparent;
+    transition: 0.5s;
+    
+}
+
+.carousel-header #carouselId.carousel .carousel-indicators li.active {
+    border: 5px solid var(--bs-primary) !important;
+    border-radius: 10px;
+}
+/*** Carousel End ***/
+
+/*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/knowing\ us.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 0 0;
+}
+/*** Single Page Hero Header End ***/
+
+/*** About Start ***/
+.about .tab-class .nav .nav-item a.active,
+.about .tab-class .nav .nav-item a.active span {
+    background: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
+/*** About End ***/
+
+/*** Country List Start ***/
+.artists-thumb {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex: 1 1 calc(25% - 16px); /* Ensures 4 items per row with gaps */
+    max-width: calc(25% - 16px); /* Prevent items from exceeding their allocated space */
+    box-sizing: border-box; /* Includes padding/border in width calculation */
+}
+
+.artists-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Optional: Adds space between images */
+    gap: 16px; /* Adjust the spacing between images */
+    padding: 0 16px; /* Add padding for small screens */
+}
+
+.artists-image {
+    border-radius: var(--border-radius-medium);
+    display: block;
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images crop neatly if needed */
+}
+  
+.artists-thumb:hover .artists-hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+  
+.artists-hover {
+    background-color: var(--bs-primary);
+    background-color: #01ada16c;
+    border-radius: var(--border-radius-medium);
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    margin: 20px;
+    padding: 35px;
+    transition: all 0.5s ease;
+    transform: translateY(100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    text-align: center;
+}
+  
+.artists-hover h3 a {
+    color: var(--bs-darkcharcoal);
+    min-width: 180px;
+}
+  
+.artists-hover p {
+    color: var(--bs-cream);
+}
+  
+.artistshover h3 a:hover {
+    color: var(--bs-white);
+}
+  
+.artists-hover hr {
+    margin: 1.5rem 0;
+}   
+
+/*** Media Queries for Responsiveness ***/
+
+/* Large Screens (Desktops) */
+@media (min-width: 1024px) {
+    .artists-thumb {
+        flex: 1 1 calc(25% - 16px); /* 4 items per row */
+        max-width: calc(25% - 16px);
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .artists-thumb {
+        flex: 1 1 calc(33.33% - 16px); /* 3 items per row */
+        max-width: calc(33.33% - 16px);
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 767px) {
+    .artists-thumb {
+        flex: 1 1 calc(50% - 16px); /* 2 items per row */
+        max-width: calc(50% - 16px);
+    }
+
+    .artists-container {
+        gap: 8px; /* Reduce gap for smaller screens */
+        padding: 0 8px;
+    }
+
+    .artists-hover {
+        padding: 20px; /* Reduce padding for hover effect */
+        margin: 10px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .artists-thumb {
+        flex: 1 1 100%; /* 1 item per row */
+        max-width: 100%;
+    }
+}
+
+/*** Country List End ***/
+
+/*** General Styles ***/
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-4, .col-md-12, .col-lg-4, .col-lg-8 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*** Top Sport Section ***/
+.ftco-menu {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.ftco-menu .nav-pills .nav-link {
+    border-radius: 0;
+    margin: 0 5px;
+    padding: 10px 15px;
+    color: var(--bs-primary);
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid var(--bs-primary);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.ftco-menu .nav-pills .nav-link.active, 
+.ftco-menu .nav-pills .nav-link:hover {
+    color: #fff;
+    background: var(--bs-secondary);
+    border-color: transparent;
+}
+
+@media (max-width: 767.98px) {
+    .ftco-menu .nav-pills .nav-link {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.ftco-menu .f-menu-img {
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+/*** Menu Wrap Styles ***/
+.menu-wrap {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-wrap .menu-img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-wrap .text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--bs-darkteal);
+}
+
+.menu-wrap .text p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+/*** Tab Content Styles ***/
+.tab-contents > .tab-pane {
+    display: none;
+}
+
+.tab-contents > .active {
+    display: block;
+}
+
+/*** Responsive Adjustments ***/
+@media (max-width: 991.98px) {
+    .ftco-menu .f-menu-img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ftco-menu .f-menu-img {
+        height: 200px;
+    }
+}
+
+
+/*** Chatbox Start ***/
+.chatbox {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .chatbox-button {
+    background-color: var(--bs-primary);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .chatbox-window {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    cursor: move; /* Indicate it can be moved */
+  }
+  
+  .chatbox-header {
+    padding: 10px;
+    background-color: var(--bs-secondary);
+    color: white;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: move; /* Allow dragging by changing cursor */
+  }
+  
+  .close-chatbox {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .chatbox-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .send-message {
+    background-color: var(--bs-secondary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+/*** Chatbot End ***/
+
+/*** Footer Start ***/
+.footer {
+    border-top: 3px;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-style: dotted;
+    border-color: var(--bs-light);
+}
+.footer .footer-item a,
+.footer .footer-item p {
+    line-height: 35px;
+    color: var(--bs-body);
+    transition: 0.5s;
+}
+
+.footer .footer-item a:hover {
+    color: var(--bs-primary);
+    letter-spacing: 1px;
+}
+
+.footer .footer-item .footer-gallery {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.footer .footer-item .footer-gallery img {
+    transition: 0.5s;
+}
+
+.footer .footer-item .footer-gallery:hover img {
+    transform: scale(1.2);
+}
+
+.footer .footer-item .footer-gallery .footer-search-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.footer .footer-item .footer-gallery:hover .footer-search-icon {
+    opacity: 1;
+    background: rgba(0, 0, 0, .6);
+}
+/*** Footer End ***/
+
+/*** copyright Start ***/
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark) !important;
+}
+/*** copyright end ***/
+
+/*** Contact Us Profile Image***/
+.image-row {
+    display: flex; /* Arrange images horizontally */
+    gap: 20px; /* Space between images */
+    justify-content: center; /* Center the images horizontally */
+  }
+
+  .image-row img {
+    width: 100px; /* Adjust the size (width and height) */
+    height: 100px; /* Equal to width for a perfect circle */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Ensure the image fills the circle without distortion */
+  }
+
+  .image-row p {
+    text-align: center;
+  }
