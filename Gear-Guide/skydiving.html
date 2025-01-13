@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skydiving Equipment Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1>Skydiving Equipment Gallery</h1>
+    <p>Your one-stop-shop for all your skydiving needs</p>
+  </header>
+
+  <!-- Equipment Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Skydiving Gear</h2>
+      <div class="gallery">
+        <!-- Gallery Item 1: Skydiving Helmet -->
+        <div class="item" onclick="openModal('Skydiving Helmet', 'A safety-certified helmet for extreme sports like skydiving.', 'https://ikhlassepakat.my/product/cookie-g4-skydiving-helmet/')">
+          <img src="skyhelmet.png" alt="Skydiving Helmet">
+          <p>Skydiving Helmet</p>
+        </div>
+
+        <!-- Gallery Item 2: Skydiving Goggle -->
+        <div class="item" onclick="openModal('Skydiving Goggle', 'Skydiving goggles protect your eyes from wind, debris, and altitude changes during freefall.', 'https://shopee.com.my/buyer/login?next=https%3A%2F%2Fshopee.com.my%2FSkydiver-Goggles-Eye-Protection-with-Adjustable-Strap-for-Skating-Hiking-Black-i.288256169.19294191276')">
+          <img src="goggle.jpg" alt="Skydiving Goggle">
+          <p>Skydiving Goggle</p>
+        </div>
+
+        <!-- Gallery Item 3: Skydiving Gloves -->
+        <div class="item" onclick="openModal('Skydiving Gloves', 'Skydiving gloves provide grip, protection, and dexterity for secure handling of equipment.', 'https://www.decathlon.my/p/diving-gloves-2-mm-neoprene-black-subea-8301094.html?srsltid=AfmBOoqrOvO_HexMEIconRkVKZPEq2JO-uEa8XpT3D4XheKnmLe8z9fJ')">
+          <img src="skyglove.jpg" alt="Skydiving Gloves">
+          <p>Skydiving Gloves</p>
+        </div>
+
+        <!-- Gallery Item 4: belts -->
+        <div class="item" onclick="openModal('Weight Belts', 'Skydiving weight belt to help maintain proper body position and control during freefall.', 'https://www.chutingstar.com/skydive/parasport-skydiver-weight-belt')">
+            <img src="skydivingbelt.jpg" alt="belt">
+                <p>Weight Belts</p>
+                  </div>
+          
+        <!-- Gallery Item 5: altimeter-->
+        <div class="item" onclick="openModal('Altimeter', 'Skydiving altimeter to measure altitude, ensuring safe deployment of the parachute during the jump.', 'https://www.chutingstar.com/skydive/ares-ii-digital-altimeter')">
+         <img src="skyaltimeter.jpg" alt="altimeter">
+             <p>Altimeter</p>
+                </div>
+
+        <!-- Gallery Item 6: backpack-->
+        <div class="item" onclick="openModal('Skydiving Backpack', 'Skydiving backpack designed to securely carry and deploy the parachute during freefall, with reinforced straps and compartments for all essential gear.', 'https://www.chutingstar.com/skydive/chutingstar-skydiving-rig-gear-bag-backpack')">
+         <img src="skybackpack.jpg" alt="Skydiving Backpack">
+            <p>Skydiving Backpack</p>
+             </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-section">
+    <h2>Skydiving Basics: from the Pre-jump to the Landing</h2>
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/YTQzXokpv3Q?si=anVYwaQeHdZOhYX2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div id="modal-link-container"></div> <!-- Purchase Link -->
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Skydiving Equipment Gallery | All Rights Reserved</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+

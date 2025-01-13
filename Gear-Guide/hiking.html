@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiking Equipment Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1>Hiking Equipment Gallery</h1>
+    <p>Your one-stop-shop for all your hiking needs</p>
+  </header>
+
+  <!-- Equipment Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Hiking Gear</h2>
+      <div class="gallery">
+        <!-- Gallery Item 1: Backpacks -->
+        <div class="item" onclick="openModal('Backpacks', 'The hiking backpack is key to the whole operation. It holds all the goodies you’ll be taking along on your adventure such as snacks, layers, headlamp, water, and more.', 'https://www.decathlon.my/search?query=hiking%20pole&indexName=prod_pim_v2_index&queryID=8a54834055fff96dfec7ba001abffa13')">
+          <img src="backpackk.jpg" alt="Backpacks">
+          <p>Backpacks</p>
+        </div>
+
+        <!-- Gallery Item 2: Hiking Boots -->
+        <div class="item" onclick="openModal('Hiking Boots', 'Hiking boots are sturdy, supportive footwear designed for outdoor activities like hiking and trekking. They provide traction, protection, and comfort.', 'https://www.decathlon.my/search?query=hiking%20pole&indexName=prod_pim_v2_index&queryID=8a54834055fff96dfec7ba001abffa13')">
+          <img src="boot.jpg" alt="Hiking Boots">
+          <p>Hiking Boots</p>
+        </div>
+
+        <!-- Gallery Item 3: Hiking Pole -->
+        <div class="item" onclick="openModal('Hiking Pole', 'A hiking pole is a lightweight, adjustable tool used to provide stability and support while hiking.', 'https://www.decathlon.my/search?query=hiking%20pole&indexName=prod_pim_v2_index&queryID=8a54834055fff96dfec7ba001abffa13')">
+          <img src="hikingpole.jpg" alt="Hiking Pole">
+          <p>Hiking Pole</p>
+        </div>
+
+        <!-- Gallery Item 4: Hiking Pants -->
+         <div class="item" onclick="openModal('Hiking Pants', 'Durable and breathable hiking pants for comfort and protection on any adventure.', 'https://www.decathlon.my/search?query=hiking%20pants&indexName=prod_pim_v2_index&queryID=717c1954b97587a90f16078ff2aa5505')">
+             <img src="hikingpantss.jpg" alt="Hiking Pants">
+               <p>Hiking Pants</p>
+                  </div>
+          
+        <!-- Gallery Item 5: Socks -->
+        <div class="item" onclick="openModal('Socks', 'Comfortable, moisture-wicking socks to keep your feet dry and blister-free on the trail.', 'https://www.decathlon.my/search?query=socks&indexName=prod_pim_v2_index&queryID=bff8632507913c76d61e3752b6c46033')">
+         <img src="hikingsocks.jpg" alt="Socks">
+             <p>Socks</p>
+                </div>
+
+        <!-- Gallery Item 6: Hiking Jacket -->
+        <div class="item" onclick="openModal('Hiking Jacket', 'Lightweight, waterproof jacket designed to keep you warm and dry in any weather.', 'https://www.decathlon.my/c/outdoor-sports/hiking-trekking/apparel/jackets-fleeces/jackets.html?srsltid=AfmBOoo88uD49qJ2_AyFl5lQSJ1W3nXsJllLxjlVxy02K6flyguPms--')">
+         <img src="hikingjacket.jpg" alt="Hiking Jacket">
+            <p>Hiking Jacket</p>
+             </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Video Section -->
+  <section id="video-section">
+    <h2>How to Prepare for a Day Hike</h2> <br>
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/OHl5B2yltW8?si=lsMsbzLCc9LPnEiy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+  </section>
+  
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div id="modal-link-container"></div> <!-- Purchase Link -->
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Hiking Equipment Gallery | All Rights Reserved</p>
+  </footer>
+
+      
+  <script src="script.js"></script>
+</body>
+
+</html>
+

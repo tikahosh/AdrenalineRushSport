@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diving Equipment Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1>Diving Equipment Gallery</h1>
+    <p>Your one-stop-shop for all your diving needs</p>
+  </header>
+
+  <!-- Equipment Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Diving Gear</h2>
+      <div class="gallery">
+        <!-- Gallery Item 1:Diving Goggles -->
+        <div class="item" onclick="openModal('Diving Goggles', 'Diving goggles provide clear underwater vision and help protect your eyes from chlorine, saltwater, and debris. With a watertight seal and adjustable straps, they ensure a snug fit for comfortable and safe diving experiences.', 'https://scubawarehouse.com.my/product/gull-anelia-mask/')">
+          <img src="divinggoggles.jpg" alt="Diving Goggles">
+          <p>Diving Goggles</p>
+        </div>
+
+        <!-- Gallery Item 2:Diving Fins -->
+        <div class="item" onclick="openModal('Diving Fins', 'Diving fins enhance your swimming efficiency by allowing you to move through water with less effort and more speed. Designed for both comfort and performance, they provide greater propulsion and control, making them essential for diving and snorkeling adventures.', 'https://scubawarehouse.com.my/product/scubapro-go-travel-fins/')">
+          <img src="divingfins.jpg" alt="Diving Fins">
+          <p>Diving Fins</p>
+        </div>
+
+        <!-- Gallery Item 3: Diving Hood-->
+        <div class="item" onclick="openModal('Diving Hood', 'A diving hood is a protective accessory worn over the head to keep you warm and shield your hair from saltwater during dives. Made from neoprene, it helps retain body heat, reduce water entry, and protect against cold water, ensuring comfort and safety during underwater exploration.', 'https://scubawarehouse.com.my/')">
+          <img src="divinghood.jpg" alt="Diving Hood">
+          <p>Diving Hood</p>
+        </div>
+
+         <!-- Gallery Item 4: Diving Pressure Console -->
+        <div class="item" onclick="openModal('Diving Pressure Console', 'A diving pressure console is a key instrument used by divers to monitor their air tank pressure, depth, and sometimes water temperature during a dive. Typically integrated with a dive computer or gauge, it provides real-time data to help divers track their remaining air supply and avoid dangerous depths, ensuring a safe and well-managed dive.', 'https://scubawarehouse.com.my/')">
+        <img src="divingpressure.jpg" alt="Diving Pressure Console">
+            <p>Diving Pressure Console</p>
+              </div>
+ 
+        <!-- Gallery Item 5: Wetsuit -->
+        <div class="item" onclick="openModal('Wetsuit', 'A wetsuit is a garment worn for swimming in cold water, designed for insulation, flexibility, and comfort in the water.', 'https://www.decathlon.my/search?query=hiking%20pole&indexName=prod_pim_v2_index&queryID=8a54834055fff96dfec7ba001abffa13')">
+         <img src="swimsuitt.jpg" alt="Wetsuit">
+             <p>Wetsuit</p>
+                </div>
+          
+        <!-- Gallery Item 6: Diving Regulator -->
+        <div class="item" onclick="openModal('Diving Regulator', 'A diving regulator is a crucial piece of diving equipment that reduces the high-pressure air from your tank to a breathable level. It delivers air to the diver through the mouthpiece while maintaining a consistent flow, ensuring safe and controlled breathing underwater. Regulators typically include a primary second stage and an alternate air source for emergencies.', 'https://scubawarehouse.com.my/product/atomic-tfx-regulator/')">
+        <img src="divingregulator.jpeg" alt="Diving Regulator">
+        <p>Diving Regulator</p>
+            </div>
+      </div>
+    </div>
+
+    <section id="video-section">
+      <h2>Learn to Scuba Dive - Open Water Diver  </h2>
+      <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/fVDTrODVWOg?si=riTxpzdF0hn8QjKu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </section>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div id="modal-link-container"></div> <!-- Purchase Link -->
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Kayaking Equipment Gallery | All Rights Reserved</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
