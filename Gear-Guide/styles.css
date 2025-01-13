@@ -203,64 +203,41 @@ h2:hover {
 }
 
 /* Video Styles */
+#video-section {
+  padding: 40px 0;
+  background-color: #ffffff;  /* Light background for the video section */
+  text-align: center;
+  margin-top: 40px;
+}
+
+#video-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;  /* Dark blue color for the heading */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 #video-section video {
   width: 100%;
   max-width: 800px;  /* Max width to prevent video from becoming too large */
   height: auto;  /* Adjust height automatically to maintain aspect ratio */
   border-radius: 10px;  /* Rounded corners for the video */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);  /* Soft shadow around the video */
-  border: 3px solid #fff;  /* White border around the video */
+  border: 3px solid #fff;  /* Blue border around the video */
 }
 
-/* Responsive Design for Smaller Screens (Mobile-first) */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   #video-section h2 {
     font-size: 1.5rem;  /* Smaller font size on mobile */
   }
 
-  #video-section video {
+  #video-section iframe {
     width: 90%;  /* Reduce the video size on smaller screens */
-    max-width: 90%;  /* Ensure the video doesn't become too wide */
-  }
-
-  #video-section {
-    padding: 30px 10px;  /* Reduced padding for mobile */
   }
 }
-
-/* For Larger Screens (Tablets and Desktops) */
-@media (min-width: 768px) {
-  #video-section {
-    flex-direction: row;  /* Arrange items horizontally */
-    justify-content: space-between;  /* Distribute items evenly */
-    padding: 40px 40px;  /* Adjust padding for larger screens */
-  }
-
-  #video-section h2 {
-    font-size: 2rem;  /* Font size for larger screens */
-  }
-}
-
-@media (min-width: 1024px) {
-  #video-section {
-    padding: 60px 80px;  /* More padding for large desktop screens */
-  }
-}
-
-/* Video container */
-#video-section .video-container {
-  width: 100%;
-  max-width: 800px;  /* Maximum width for the video */
-  margin: 0 auto;  /* Center video horizontally */
-}
-
-/* If using iframe for embedding videos */
-#video-section .video-container iframe {
-  width: 100%;
-  height: 450px;  /* Adjust iframe height based on aspect ratio */
-  border: none;
-}
-
 
 /* Modal Styles */
 .modal {
